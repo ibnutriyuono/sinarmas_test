@@ -1,7 +1,9 @@
 import React from 'react'
 import {
   Home,
-  CreateEmployee
+  CreateEmployee,
+  EmployeeDetails,
+  EditEmployee
 } from '../views'
 import Navbar from '../components/Navbar'
 import {
@@ -22,6 +24,12 @@ const RouteConfig = () => {
           </Route>
           <Route path="/create-employee">
             <CreateEmployee />
+          </Route>
+          <Route path="/employees/:employeeId/edit">
+            <EditEmployee />
+          </Route>
+          <Route path="/employees/:employeeId">
+            <EmployeeDetails />
           </Route>
         </Switch>
       </Router>
